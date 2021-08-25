@@ -1,9 +1,20 @@
+import { useMemo } from 'react';
+import { Layout } from 'antd';
 import styles from './index.less';
+import Portal from './Portal';
+const { Header, Footer, Sider, Content } = Layout;
 
-export default function IndexPage() {
+const HomePage: React.FC<any> = () => {
   return (
-    <div>
-      <h1 className={styles.title}>Page index</h1>
-    </div>
+    <Layout className={styles.root}>
+      <Header>
+
+      </Header>
+      <Content className={styles.rootContent}>
+        <Portal></Portal>
+      </Content>
+      {/*<Footer>Footer</Footer>*/}
+    </Layout>
   );
-}
+};
+export default HomePage;
