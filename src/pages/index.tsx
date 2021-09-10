@@ -1,20 +1,16 @@
 import { useMemo } from 'react';
-import { Layout } from 'antd';
+import { Layout, Modal } from 'antd';
 import styles from './index.less';
 import Portal from './Portal';
+import Head from './Header';
+import { history } from '@@/core/history';
+import Page from '@/pages/commonHOC/Page';
+
 const { Header, Footer, Sider, Content } = Layout;
 
 const HomePage: React.FC<any> = () => {
   return (
-    <Layout className={styles.root}>
-      <Header>
-
-      </Header>
-      <Content className={styles.rootContent}>
-        <Portal></Portal>
-      </Content>
-      {/*<Footer>Footer</Footer>*/}
-    </Layout>
+    <Portal></Portal>
   );
 };
-export default HomePage;
+export default Page(HomePage);

@@ -1,0 +1,35 @@
+.root {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  .left {
+    display: flex;
+    justify-content: flex-start;
+
+    .logo {
+      font-family: "Calibri Light";
+      font-size: 24px;
+      line-height: 24px;
+      padding: 10px 20px;
+      background: azure;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
+    }
+  }
+
+  .search {
+    display: flex;
+    align-self: flex-end;
+    margin: 10px 0px;
+    padding-right: 40px;
+  }
+
+  :global {
+  }
+}
+
